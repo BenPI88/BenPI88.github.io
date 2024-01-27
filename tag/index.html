@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Outputting URL Variables</title>
+</head>
+<body>
+  <h1>Outputting the Name Variable</h1>
+  <p id="nameOutput"></p>
+  <script>
+    // Get the query string from the URL
+    const queryString = window.location.search;
+    
+    // Parse the query string into a dictionary
+    const urlParams = new URLSearchParams(queryString);
+    
+    // Get the value of the 'name' parameter
+    const nameParam = urlParams.get('name');
+    
+    // Display the name variable on the screen
+    document.getElementById('nameOutput').textContent = `The name variable is: ${nameParam}`;
+  </script>
+</body>
+</html>
