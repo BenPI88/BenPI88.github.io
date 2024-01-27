@@ -18,15 +18,10 @@
     
     // Display the name variable on the screen
     document.getElementById('nameOutput').textContent = `${nameParam}`;
-
-    // Get the coordinates from the URL
-    const urlParams = new URLSearchParams(window.location.search);
+    
     const coordinates = urlParams.get('maploc');
     
-    // Check if coordinates are present
-    if (coordinates) {
-      // Construct the Google Maps URL
-      const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${cooradinates}`;
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${cooradinates}`;
     
       // Create a link element and set its href attribute
       const link = document.createElement('a');
