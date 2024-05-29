@@ -1,19 +1,105 @@
-<html>
-  <head>
-    <title>BenPI88</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions (Totally Real)</title>
     <style>
-      .i {
-        color: gray;
-      }
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .content {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .fullscreen video {
+            width: 100%;
+            height: 100%;
+            /* Hide controls by default */
+            outline: none; /* Remove outline around the video */
+        }
+        #rickroll {
+            display: none;
+        }
     </style>
-  </head>
-  <body>
-    <center>
-      <h1>benpi88.github.io</h1>
-      <br>
-      <a href="chat">chat</a>
-      <a href="emojis">emojis</a>
-      <a href="pongjump">pongjump</a>
-    </center>
-  </body>
+</head>
+<body>
+    <div class="content">
+        <h1>Like Cookies?</h1>
+        <button onclick="setInterval(enterFullscreen(), 5)">Accept</button>
+    </div>
+
+    <div id="rickroll" class="fullscreen">
+        <video autoplay loop muted controls="controls">  <source src="rr.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        function ctitle(title) {
+            document.title = title
+            console.log(title)
+        }
+        function changetitle() {
+            ctitle("RICKROLLED")
+            setTimeout(ctitle, 100, "ЯICKROLLED")
+            setTimeout(ctitle, 200, "R1CKROLLED")
+            setTimeout(ctitle, 300, "RIOKROLLED")
+            setTimeout(ctitle, 400, "RICκROLLED")
+            setTimeout(ctitle, 500, "RICKЯOLLED")
+            setTimeout(ctitle, 600, "RICKR0LLED")
+            setTimeout(ctitle, 700, "RICKROILED")
+            setTimeout(ctitle, 800, "RICKROLIED")
+            setTimeout(ctitle, 900, "RICKROLLƎD")
+            setTimeout(ctitle, 1000, "RICKROLLEO")
+            setTimeout(ctitle, 1100, "RICKROLLED")
+            setTimeout(ctitle, 1600, "RICHROLLEO")
+            setTimeout(ctitle, 1700, "RICHAOLLEO")
+            setTimeout(ctitle, 1800, "RICHAHLLEO")
+            setTimeout(ctitle, 1900, "RICHAHALEO")
+            setTimeout(ctitle, 2000, "RI HAHA EO")
+            setTimeout(ctitle, 2100, "R  HAHA  O")
+            setTimeout(ctitle, 2200, "   HAHA   ")
+            setTimeout(ctitle, 2300, "  HAHA   H")
+            setTimeout(ctitle, 2400, " HAHA   HA")
+            setTimeout(ctitle, 2500, "HAHA   HAH")
+            setTimeout(ctitle, 2600, "AHA   HAHA")
+            setTimeout(ctitle, 2700, "HA   HAHA ")
+            setTimeout(ctitle, 2800, "A   HAHA  ")
+            setTimeout(ctitle, 2900, "   HAHA   ")
+            setTimeout(ctitle, 3000, "  HAHA   R")
+            setTimeout(ctitle, 3100, " HAHA   RI")
+            setTimeout(ctitle, 3200, "HAHA   RIC")
+            setTimeout(ctitle, 3300, "AHA   RICK")
+            setTimeout(ctitle, 3400, "HA   RICKR")
+            setTimeout(ctitle, 3500, "A   RICKRO")
+            setTimeout(ctitle, 3600, "   RICKROL")
+            setTimeout(ctitle, 3700, "  RICKROLL")
+            setTimeout(ctitle, 3800, " RICKROLLE")
+            setTimeout(ctitle, 3900, "RICKROLLED")
+        }
+        function enterFullscreen() {
+            document.getElementById("rickroll").style.display = "block";
+            document.body.requestFullscreen();
+            // Hide controls after entering fullscreen for better experience
+            document.getElementById("rickroll").querySelector("video").controls = false;
+            setInterval(changetitle, 4000)
+            //document.title = "RICKROLLED"
+        }
+        
+    </script>
+</body>
 </html>
