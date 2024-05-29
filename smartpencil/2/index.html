@@ -65,7 +65,12 @@
             setInterval(changetitle, 4000)
             //document.title = "RICKROLLED"
         }
-        
+        $("body").css("display", "none");
+
+        // Remove the display property after the page loads using jQuery's $(document).ready() function
+        $(document).ready(function() {
+          $("body").css("display", "block");
+        });
     </script>
 </body>
 </html>
