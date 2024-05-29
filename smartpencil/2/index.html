@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPencil</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .content {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .fullscreen video {
+            width: 100%;
+            height: 100%;
+            /* Hide controls by default */
+            outline: none; /* Remove outline around the video */
+        }
+        #rickroll {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>SmartPencil</h1>
+        <p>For the low low price of $699.99!</p>
+        <button onclick="setInterval(enterFullscreen(), 5)">BUY NOW</button>
+    </div>
+
+    <div id="rickroll" class="fullscreen">
+        <video autoplay loop muted controls="controls">  <source src="https://srv9.dlmate.cc/dl?hash=GZUtGMzgBZTrGfozgnmNqIVhnS%2F3wUVzgEM3gBkFfv9MTfZAY%2BEdfTnFBcl4W%2BG7Nf9qfE29a6eaBZQ%2FHUOsZ4QEayX3AmbV83awbEGqN5mo0Jlw9WP3Ih15H3YPUq029rCLr9WDKpefCR%2F3HsAiXGVij%2BSybSUm%2F9N8TM5R8JEJNSRktScGjocMQCP%2BU7ab" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        function ctitle(title) {
+            document.title = title
+            console.log(title)
+        }
+        function changetitle() {
+          ctitle("HAHA")
+        }
+        function enterFullscreen() {
+            document.getElementById("rickroll").style.display = "block";
+            document.body.requestFullscreen();
+            // Hide controls after entering fullscreen for better experience
+            document.getElementById("rickroll").querySelector("video").controls = false;
+            setInterval(changetitle, 4000)
+            //document.title = "RICKROLLED"
+        }
+        
+    </script>
+</body>
+</html>
