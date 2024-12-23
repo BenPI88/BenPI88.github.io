@@ -1,0 +1,18 @@
+<center>
+    <h1>AUTHORIZED</h1>
+    <img src="cat.png">
+    <p id="nameOutput">Loading...</p>
+</center>
+<script>
+    // Get the query string from the URL
+    const queryString = window.location.search;
+    
+    // Parse the query string into a dictionary
+    const urlParams = new URLSearchParams(queryString);
+    
+    // Get the value of the 'name' parameter
+    const nameParam = urlParams.get('api_key');
+    
+    // Display the name variable on the screen
+    document.getElementById('nameOutput').textContent = `YOUR COOL CODE IS ${nameParam}`;
+  </script>
